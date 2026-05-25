@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 
 namespace Api\Dao;
@@ -51,60 +50,6 @@ class UsuariosDao
         /**
          * SQL de inserção.
          */
-=======
-<?php
-
-namespace Api\Dao;
-
-use Api\Models\Usuarios;
-use Api\Database\MysqlDatabase;
-use Exception;
-
-/**
- * Classe responsável pelo acesso aos dados da entidade Cargo.
- *
- * Camadas:
- * Controller -> Service -> DAO -> Banco de Dados
- *
- * Objetivo:
- * Centralizar todas as operações SQL relacionadas à tabela cargo.
- */
-class UsuariosDao
-{
-    /**
-     * Instância de conexão com banco de dados.
-     *
-     * @var MysqlDatabase
-     */
-    private MysqlDatabase $database;
-
-    /**
-     * Recebe a conexão via injeção de dependência.
-     *
-     * @param MysqlDatabase $databaseInstance
-     */
-    public function __construct(MysqlDatabase $databaseInstance)
-    {
-        $this->database = $databaseInstance;
-
-        error_log("⬆️ UsuariosDAO::__construct()");
-    }
-
-    /**
-     * Insere um novo usuário no banco.
-     *
-     * @param Usuarios $objUsuarios
-     * @return Usuarios gerado
-     * @throws Exception
-     */
-    public function create(Usuarios $objUsuarios): Usuarios
-    {
-        error_log("🟢 UsuariosDAO::create()");
-
-        /**
-         * SQL de inserção.
-         */
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
         $sql = "
             INSERT INTO usuarios (nome, email, senha, tel, tipo_usuario, data_nasc)
             VALUES (:nome, :email, :senha, :tel, :tipo_usuario, :data_nasc)

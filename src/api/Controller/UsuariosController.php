@@ -144,12 +144,8 @@ class UsuariosController
         $deletado = $this->usuariosService->deleteService($idUsuario);
 
         $resposta = [
-<<<<<<< HEAD
             'success' => $deletado,
             'message' => 'Usuário excluído com sucesso'
-=======
-            'success' => $deletado
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
         ];
 
         $response->getBody()->write(json_encode($resposta));

@@ -30,7 +30,6 @@ class InscricoesService
     {
         error_log("🟣 InscricoesService::createService()");
 
-<<<<<<< HEAD
         $usuarioId = $objPHP->inscricoes->usuarioId ?? null;
         $eventoId = $objPHP->inscricoes->eventoId ?? null;
         $dataInscricao = $objPHP->inscricoes->dataInscricao ?? null;
@@ -82,29 +81,6 @@ class InscricoesService
         $inscricao->setEventoId($eventoId);
         $inscricao->setDataInscricao($dataInscricao);
         $inscricao->setPresenca($presenca);
-=======
-        if (!$this->usuariosDAO->findById($objPHP->inscricoes->usuarioId)) {
-            throw new ErrorResponse(
-                400,
-                "Usuário não encontrado",
-                ["message" => "O usuário com id {$objPHP->inscricoes->usuarioId} não existe."]
-            );
-        }
-
-        if (!$this->eventosDAO->findById($objPHP->inscricoes->eventoId)) {
-            throw new ErrorResponse(
-                400,
-                "Evento não encontrado",
-                ["message" => "O evento com id {$objPHP->inscricoes->eventoId} não existe."]
-            );
-        }
-
-        $inscricao = new Inscricoes();
-        $inscricao->setUsuarioId($objPHP->inscricoes->usuarioId);
-        $inscricao->setEventoId($objPHP->inscricoes->eventoId);
-        $inscricao->setDataInscricao($objPHP->inscricoes->dataInscricao);
-        $inscricao->setPresenca($objPHP->inscricoes->presenca);
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
 
         return $this->inscricaoDAO->create($inscricao);
     }
@@ -141,7 +117,6 @@ class InscricoesService
             );
         }
 
-<<<<<<< HEAD
         $usuarioId = $objPHP->inscricoes->usuarioId ?? null;
         $eventoId = $objPHP->inscricoes->eventoId ?? null;
         $dataInscricao = $objPHP->inscricoes->dataInscricao ?? null;
@@ -192,28 +167,6 @@ class InscricoesService
         $inscricaoExistente->setEventoId($eventoId);
         $inscricaoExistente->setDataInscricao($dataInscricao);
         $inscricaoExistente->setPresenca($presenca);
-=======
-        if (!$this->usuariosDAO->findById($objPHP->inscricoes->usuarioId)) {
-            throw new ErrorResponse(
-                400,
-                "Usuário não encontrado",
-                ["message" => "O usuário com id {$objPHP->inscricoes->usuarioId} não existe."]
-            );
-        }
-
-        if (!$this->eventosDAO->findById($objPHP->inscricoes->eventoId)) {
-            throw new ErrorResponse(
-                400,
-                "Evento não encontrado",
-                ["message" => "O evento com id {$objPHP->inscricoes->eventoId} não existe."]
-            );
-        }
-
-        $inscricaoExistente->setUsuarioId($objPHP->inscricoes->usuarioId);
-        $inscricaoExistente->setEventoId($objPHP->inscricoes->eventoId);
-        $inscricaoExistente->setDataInscricao($objPHP->inscricoes->dataInscricao);
-        $inscricaoExistente->setPresenca($objPHP->inscricoes->presenca);
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
 
         $this->inscricaoDAO->update($inscricaoExistente);
         return $inscricaoExistente;
