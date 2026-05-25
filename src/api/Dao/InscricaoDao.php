@@ -71,7 +71,10 @@ class InscricaoDao
             ':presenca' => $objInscricao->getPresenca()
         ];
 
+<<<<<<< HEAD
         //compila o sql antes de inserir os dados previnindo SQL Injection
+=======
+>>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
         $stmt = $this->database->getConnection()->prepare($sql);
 
         if (!$stmt->execute($parametros)) {

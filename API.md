@@ -695,4 +695,8 @@ curl -X DELETE http://localhost:8080/mensagens/1
 
 ---
 
+<<<<<<< HEAD
 **Última atualização:** 24 de Maio de 2026
+=======
+**Última atualização:** 18 de Maio de 2026
+>>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1

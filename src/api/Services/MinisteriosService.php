@@ -49,7 +49,10 @@ class MinisteriosService
      * @param int $idCoordenador
      * @throws ErrorResponse
      */
+<<<<<<< HEAD
         //dominio
+=======
+>>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
     private function validateCoordinator(int $idCoordenador): void
     {
         if (!$this->usuariosDAO->findById($idCoordenador)) {

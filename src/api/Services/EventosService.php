@@ -27,6 +27,7 @@ class EventosService
     {
         error_log("🟣 EventosService::createService()");
 
+<<<<<<< HEAD
         $titulo = trim($objPHP->eventos->titulo ?? '');
         $descricao = $objPHP->eventos->descricao ?? null;
         $dataEventoStr = $objPHP->eventos->dataEvento ?? null;
@@ -70,6 +71,15 @@ class EventosService
         $evento->setLocalEvento($localEvento);
         $evento->setLimiteVagas($limiteVagas);
         $evento->setStatusEvento($statusEvento);
+=======
+        $evento = new Eventos();
+        $evento->setTitulo($objPHP->eventos->titulo);
+        $evento->setDescricao($objPHP->eventos->descricao);
+        $evento->setDataEvento($objPHP->eventos->dataEvento);
+        $evento->setLocalEvento($objPHP->eventos->localEvento);
+        $evento->setLimiteVagas($objPHP->eventos->limiteVagas);
+        $evento->setStatusEvento($objPHP->eventos->statusEvento);
+>>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
 
         return $this->eventosDAO->create($evento);
     }
@@ -106,6 +116,7 @@ class EventosService
             );
         }
 
+<<<<<<< HEAD
         $titulo = trim($objPHP->eventos->titulo ?? '');
         $descricao = $objPHP->eventos->descricao ?? null;
         $dataEventoStr = $objPHP->eventos->dataEvento ?? null;
@@ -150,6 +161,14 @@ class EventosService
         $eventoExistente->setLocalEvento($localEvento);
         $eventoExistente->setLimiteVagas($limiteVagas);
         $eventoExistente->setStatusEvento($statusEvento);
+=======
+        $eventoExistente->setTitulo($objPHP->eventos->titulo);
+        $eventoExistente->setDescricao($objPHP->eventos->descricao);
+        $eventoExistente->setDataEvento($objPHP->eventos->dataEvento);
+        $eventoExistente->setLocalEvento($objPHP->eventos->localEvento);
+        $eventoExistente->setLimiteVagas($objPHP->eventos->limiteVagas);
+        $eventoExistente->setStatusEvento($objPHP->eventos->statusEvento);
+>>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
 
         $this->eventosDAO->update($eventoExistente);
         return $eventoExistente;
