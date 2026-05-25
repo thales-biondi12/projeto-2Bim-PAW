@@ -54,21 +54,12 @@ class UsuariosDao
             INSERT INTO usuarios (nome, email, senha, tel, tipo_usuario, data_nasc)
             VALUES (:nome, :email, :senha, :tel, :tipo_usuario, :data_nasc)
         ";
-<<<<<<< HEAD
 
         /**
          * Valores da query.
          */
         $parametros = [
             ':nome' => $objUsuarios->getNome(),
-=======
-
-        /**
-         * Valores da query.
-         */
-        $parametros = [
-            ':nome' => $objUsuarios->getNome(),
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
             ':email' => $objUsuarios->getEmail(),
             ':senha' => $objUsuarios->getSenha(),
             ':tel' => $objUsuarios->getTel(),
