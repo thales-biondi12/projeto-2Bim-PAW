@@ -44,10 +44,7 @@ class Usuarios implements JsonSerializable
         return $this->nomeUsuario;
     }
 
-<<<<<<< HEAD
     
-=======
->>>>>>> ddd022ee9a6055f2d71227862320bc73bcba8ce1
     public function setNomeUsuario(string $value): void
     {
         $nome = trim($value);
